@@ -1,0 +1,14 @@
+<div class="pull-xs-right">
+	<small>
+		Koszyk:
+		<span *ngIf = "cart.itemCount > 0">
+			{{cart.itemCount }} produkt(ów)
+			{{cart.cartPrice}}
+		</span>
+		<span *ngIf = "cart.itemCount == 0"></span>
+	</small>
+	<button class="btn btn-sm bg-inverse" [disabled] = "cart.itemCount == 0 " routerLink="/cart">
+		<i class="fas fa-shopping-cart"></i>
+	</button>
+	
+</div>
